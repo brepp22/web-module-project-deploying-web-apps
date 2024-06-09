@@ -1,0 +1,55 @@
+body {
+    background-color: whitesmoke;
+    counter-reset: section;
+}
+
+h2 {
+    color:  rgb(27, 127, 199);
+}
+
+div {
+    
+    margin: 15px;
+}
+
+#groceries{
+    margin: 5px;
+    padding: 2px;
+}
+
+input[type=text] {
+    padding: 4px 7px;
+    margin: 8px 0;
+    border-radius: 4px;
+    width: 16%;
+    height: 25px;
+    font-size: 18px;
+}
+
+  h4::before {
+    counter-increment: section;
+    content: "Item " counter(section) ": ";
+  }
+
+  h4{
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+
+  .button {
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 2px solid #555555;
+    transition-duration: 0.4s;
+    margin-left: 4px;
+  }
+
+  .button:hover {
+    background-color: #555555;
+    color:white;
+  }
