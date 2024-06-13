@@ -108,12 +108,12 @@ export default function App() {
           .filter(gr => showCompleted || !gr.completed)
           .map(gr => (
               <div key={gr.id} className="grocery">
-                <div style={{ textDecoration: gr.completed ? 'line-through rgb(27, 127, 199) 2px'  : 'none' }}>
+                <div style={{ textDecoration: gr.completed ? 'line-through rgb(27, 127, 199) 2px '  : 'none' }}>
                   <h4>{gr.grocery}</h4>
                 </div>
                 <button className = 'button' onClick ={() => toggleComplete(gr.id)}>{!gr.completed ? 'Purchase' : '✔'}</button>
                 <button className = 'button' onClick={()  => edit(gr.id)}>Edit</button>
-                <button className = 'button' onClick ={() => deleteGrocery(gr.id)}>Delete</button>
+                <button id = 'buttonDelete' onClick ={() => deleteGrocery(gr.id)}>Delete</button>
               </div>
             ))
           }
